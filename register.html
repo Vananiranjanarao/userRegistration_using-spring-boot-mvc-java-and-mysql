@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org">
+<head>
+  <title>User Registartion Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+	<h1 style="color:red">User Registartion form</h1>
+	<form class="col-5" th:action="@{/registeruser}" th:object="${user}" method="post">
+		<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Name</label>
+  <input type="text" th:field="*{name}"   class="form-control"  placeholder="enter the name">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">userid</label>
+  <input type="text"   th:field="*{userid}"  class="form-control"  placeholder="enter your id">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">email</label>
+  <input type="email" th:field="*{email}"  class="form-control"  placeholder="enter your mail">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label"> phoneNumber</label>
+  <input type="number" th:field="*{phone}" class="form-control"  placeholder="enter the number">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">password</label>
+  <input type="password" th:field="*{password}"  class="form-control"  placeholder="enter the password">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">cpassword</label>
+  <input type="password" th:field="*{cpassword}"  class="form-control"  placeholder="enter the conformpassword">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">gender</label>
+  <input type="text"   th:field="*{gender}" class="form-control"  placeholder="enter your sex">
+</div><br><br>
+<button type="submit" class="btn btn-success">Register</button>
+	</form>
+</div>
+
+</body>
+</html>

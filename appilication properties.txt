@@ -1,0 +1,10 @@
+# Appilication properties
+server.port=8080
+#url
+spring.datasource.url=jdbc:mysql://localhost:3306/user
+#userid
+spring.datasource.username=root
+#password
+spring.datasource.password=
+#hibernate
+spring.jpa.hibernate.ddl-auto=update
